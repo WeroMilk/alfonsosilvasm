@@ -679,22 +679,24 @@ header {
     position: absolute;
     top: 30px;
     right: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
     color: white;
     border: none;
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    font-size: 1.8rem;
-    cursor: pointer;
-    z-index: 2004;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
 }
 
 .exit-tour:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: rotate(90deg);
+    transform: rotate(90deg) scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .tour-title {
