@@ -92,7 +92,8 @@ export default function Home() {
       <footer className="footer">
         <div className="footer-inner">
           <p className="footer-tagline">
-            <span>¿Quieres tu propia página web? </span>
+            <span>¿Quieres tu propia página web?</span>
+            <br />
             <span className="footer-tagline-green">Escríbeme y la hacemos desde cero.</span>
           </p>
           <a
