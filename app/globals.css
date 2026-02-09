@@ -26,7 +26,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   overflow-x: hidden;
 }
 
@@ -69,17 +69,32 @@ img {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: max(clamp(2rem, 6vw, 3rem), env(safe-area-inset-top));
-    padding-bottom: max(clamp(2rem, 6vw, 3rem), env(safe-area-inset-bottom));
+    padding-top: max(clamp(2.5rem, 10vw, 3.5rem), env(safe-area-inset-top));
+    padding-bottom: max(clamp(2.5rem, 10vw, 3.5rem), env(safe-area-inset-bottom));
   }
 
   .hero-inner {
     width: 100%;
+  }
+
+  .hero-avatar-wrap {
+    margin-bottom: clamp(1rem, 4vw, 1.25rem);
+  }
+
+  .hero-title {
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-role {
+    margin-bottom: clamp(0.75rem, 3vw, 1rem);
+  }
+
+  .hero-bio {
+    margin-bottom: clamp(0.75rem, 3vw, 1rem);
+  }
+
+  .hero-cta {
+    margin-bottom: clamp(1.25rem, 5vw, 1.75rem);
   }
 }
 
