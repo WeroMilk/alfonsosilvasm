@@ -67,6 +67,20 @@ img {
   overflow: hidden;
 }
 
+@media (min-width: 769px) {
+  .hero {
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+  }
+
+  .hero-inner {
+    padding-top: 0;
+  }
+
+  .hero-avatar-wrap {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     padding-top: max(clamp(2.5rem, 10vw, 3.5rem), env(safe-area-inset-top));
