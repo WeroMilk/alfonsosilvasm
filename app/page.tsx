@@ -34,7 +34,7 @@ export default function Home() {
               Contactar
             </a>
             <a
-              href="https://wa.me/521234567890"
+              href="https://wa.me/526623501632"
               className="btn btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
