@@ -70,10 +70,15 @@ img {
 @media (min-width: 769px) {
   .hero {
     padding-top: max(0.5rem, env(safe-area-inset-top));
+    padding-bottom: 4rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
   }
 
   .hero-inner {
-    padding-top: 4rem;
+    padding-top: 0;
+    padding-bottom: 3rem;
   }
 
   .hero-avatar-wrap {
