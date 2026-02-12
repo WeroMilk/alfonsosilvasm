@@ -28,18 +28,26 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a
-              href="mailto:alfonsos@revtech.dev"
-              className="btn btn-primary"
-            >
-              Contactar
-            </a>
-            <a
               href="https://wa.me/526623501632"
               className="btn btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
             >
               WhatsApp
+            </a>
+            <a
+              href="mailto:alfonsos@revtech.dev"
+              className="btn btn-primary"
+            >
+              Contactar
+            </a>
+            <a
+              href="/luis-alfonso-silvas-cv-2026.pdf"
+              className="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver CV
             </a>
           </div>
         </div>
