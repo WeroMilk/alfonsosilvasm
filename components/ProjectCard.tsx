@@ -1,9 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import type { projects } from "@/data/projects";
 
-type Project = (typeof projects)[number];
+type Project = {
+  name: string;
+  url: string;
+  description: string;
+  image: string;
+};
 
 function getHostname(url: string): string {
   try {
