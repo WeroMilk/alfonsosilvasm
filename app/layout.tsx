@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Diego Silvas",
+  title: "ING. Diego Silvas",
   description:
     "Ing. en Sistemas Computacionales. Creo sitios modernos, rápidos y a medida. E-commerce, landings y aplicaciones web.",
   icons: {

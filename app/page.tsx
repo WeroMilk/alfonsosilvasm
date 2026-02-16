@@ -37,21 +37,15 @@ export default function Home() {
           <div className="hero-actions">
             <a
               href="https://wa.me/526621829724"
-              className="btn btn-secondary"
+              className="btn btn-primary"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              {t.hero.whatsapp}
-            </a>
-            <a
-              href="mailto:diegoasm88@gmail.com"
-              className="btn btn-primary"
             >
               {t.hero.contact}
             </a>
             <a
               href="/cv-diego-silvas-2026.pdf"
-              className="btn btn-secondary"
+              className="btn btn-primary"
               target="_blank"
               rel="noopener noreferrer"
             >

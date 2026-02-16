@@ -238,14 +238,18 @@ img {
 }
 
 .hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   width: 100%;
-  max-width: 560px;
+  max-width: 420px;
   margin: 0 auto;
   margin-bottom: 2rem;
+}
+
+.hero-actions a:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 /* ----- Buttons: verde que brilla ----- */
@@ -573,12 +577,8 @@ a.tech-tag {
   }
 
   .hero-actions {
-    flex-direction: column;
-    max-width: none;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
+    grid-template-columns: 1fr;
+    max-width: 280px;
   }
 
   .tech-title {
