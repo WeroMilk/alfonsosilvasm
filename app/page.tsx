@@ -1,69 +1,84 @@
+"use client";
+
 import Image from "next/image";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export default function Home() {
+  const { lang } = useLanguage();
+  const t = translations[lang];
+
+  const projectsWithTranslations = projects.map((project, i) => ({
+    ...project,
+    name: t.projects.list[i].name,
+    description: t.projects.list[i].description,
+  }));
+
   return (
     <>
-      {/* Hero / Sobre mí */}
       <header className="hero">
         <div className="hero-inner">
           <div className="hero-avatar-wrap">
             <Image
               src="/avatar.png"
-              alt="Alfonso"
+              alt="Diego"
               width={140}
               height={140}
               className="hero-avatar"
               priority
             />
           </div>
-          <h1 className="hero-title">Hola, soy Alfonso Silvas</h1>
-          <p className="hero-role">Desarrollador web</p>
-          <p className="hero-bio">
-            Transformo visiones en soluciones digitales completas y operativas. Mi enfoque abarca el desarrollo profesional de e-commerce, landing pages, sitios web con IA y la creación de sistemas personalizados para automatización, gestión de inventarios y bases de datos.
-          </p>
-          <p className="hero-cta">
-            ¿Listo para convertir su idea en realidad? Hablemos de cómo puedo potenciar su negocio con una solución web estratégica.
-          </p>
+          <h1 className="hero-title">{t.hero.title}</h1>
+          <p className="hero-role">{t.hero.role}</p>
+          <p className="hero-bio">{t.hero.bio}</p>
+          <p className="hero-cta">{t.hero.cta}</p>
           <div className="hero-actions">
             <a
-              href="https://wa.me/526623501632"
+              href="https://wa.me/526621829724"
               className="btn btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
             >
-              WhatsApp
+              {t.hero.whatsapp}
             </a>
             <a
-              href="mailto:alfonsos@revtech.dev"
+              href="mailto:diegoasm88@gmail.com"
               className="btn btn-primary"
             >
-              Contactar
+              {t.hero.contact}
             </a>
             <a
-              href="/luis-alfonso-silvas-cv-2026.pdf"
+              href="/cv-diego-silvas-2026.pdf"
               className="btn btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver CV
+              {t.hero.viewCv}
+            </a>
+            <a
+              href="/15461088-C1.pdf"
+              className="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.hero.professionalId}
             </a>
           </div>
         </div>
       </header>
 
-      {/* Proyectos */}
       <section className="projects" aria-labelledby="projects-heading">
         <div className="projects-inner">
           <h2 id="projects-heading" className="projects-title">
-            Mis Proyectos
+            {t.projects.heading}
           </h2>
           <p className="projects-subtitle">
-            Algunos sitios que he desarrollado. Haz clic en cualquier tarjeta para visitar.
+            {t.projects.subtitle}
           </p>
           <ul className="projects-grid">
-            {projects.map((project) => (
+            {projectsWithTranslations.map((project) => (
               <li key={project.url}>
                 <ProjectCard project={project} />
               </li>
@@ -72,14 +87,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tecnologías de punta */}
       <section className="tech" aria-labelledby="tech-heading">
         <div className="tech-inner">
           <h2 id="tech-heading" className="tech-title">
-            Tecnologías de punta
+            {t.tech.heading}
           </h2>
           <p className="tech-subtitle">
-            Trabajamos con un stack actualizado al máximo: el mismo ecosistema que exige el mercado para construir soluciones rápidas, escalables y fáciles de mantener.
+            {t.tech.subtitle}
           </p>
           <div className="tech-tags">
             <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="tech-tag">Next.js</a>
@@ -96,21 +110,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer / CTA */}
       <footer className="footer">
         <div className="footer-inner">
           <p className="footer-tagline">
-            <span>¿Quieres tu propia página web?</span>
+            <span>{t.footer.tagline1}</span>
             <br />
-            <span className="footer-tagline-green">Escríbeme y la hacemos desde cero.</span>
+            <span className="footer-tagline-green">{t.footer.tagline2}</span>
           </p>
           <a
-            href="mailto:alfonsos@revtech.dev"
+            href="mailto:diegoasm88@gmail.com"
             className="btn btn-footer"
           >
-            alfonsos@revtech.dev
+            {t.footer.email}
           </a>
-          <p className="footer-copy">© 2026 Todos Los Derechos Reservados.</p>
+          <p className="footer-copy">{t.footer.copy}</p>
         </div>
       </footer>
     </>

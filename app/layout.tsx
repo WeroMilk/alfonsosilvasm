@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
+import { LayoutWithToggle } from "@/components/LayoutWithToggle";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -8,9 +10,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Alfonso Silvas",
+  title: "Diego Silvas",
   description:
-    "Desarrollador web. Creo sitios modernos, rápidos y a medida. E-commerce, landings y aplicaciones web.",
+    "Ing. en Sistemas Computacionales. Creo sitios modernos, rápidos y a medida. E-commerce, landings y aplicaciones web.",
   icons: {
     icon: "/favicon.svg",
   },
@@ -23,7 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          <LayoutWithToggle>{children}</LayoutWithToggle>
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

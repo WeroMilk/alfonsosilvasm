@@ -52,6 +52,46 @@ img {
   display: block;
 }
 
+/* ----- Idioma / Language toggle ----- */
+.lang-toggle-wrap {
+  position: fixed;
+  top: max(0.75rem, env(safe-area-inset-top));
+  right: max(1rem, env(safe-area-inset-right));
+  z-index: 100;
+  display: flex;
+  gap: 0;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  box-shadow: var(--shadow-deep);
+}
+
+.lang-btn {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.lang-btn:hover {
+  color: var(--text);
+}
+
+.lang-btn-active {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--green-glow);
+}
+
+.lang-btn-active:hover {
+  color: var(--green-glow);
+}
+
 /* ----- Hero: fondo oscuro + foco de luz ----- */
 .hero {
   position: relative;
