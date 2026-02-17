@@ -45,19 +45,11 @@ export default function Home() {
             </a>
             <a
               href="/cv-diego-silvas-2026.pdf"
-              className="btn btn-primary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t.hero.viewCv}
-            </a>
-            <a
-              href="/15461088-C1.pdf"
               className="btn btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {t.hero.professionalId}
+              {t.hero.viewCv}
             </a>
           </div>
         </div>
